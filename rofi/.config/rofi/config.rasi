@@ -3,4 +3,6 @@
 
 //@theme "/home/ender/.local/share/rofi/themes/squared-nord.rasi"
 
-@theme "/home/ender/.local/share/rofi/themes/squared-material-red.rasi"
+//@theme "/home/ender/.local/share/rofi/themes/squared-material-red.rasi"
+
+@theme "/home/ender/.config/rofi/saw.rasi"
