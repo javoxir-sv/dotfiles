@@ -30,6 +30,18 @@ fish
 swaybg
 stow
 eza
+# qyock
 qt6-multimedia-ffmpeg 
 gst-plugins-good 
 gst-libav
+layer-shell-qt
+qt6-declarative
+qt6-5compat 
+qt6-svg
+qt6-multimedia 
+gst-plugins-base 
+gst-plugins-good 
+gst-plugins-bad 
+gst-plugins-ugly
+
+
