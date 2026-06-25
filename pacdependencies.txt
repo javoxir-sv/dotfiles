@@ -30,3 +30,6 @@ fish
 swaybg
 stow
 eza
+qt6-multimedia-ffmpeg 
+gst-plugins-good 
+gst-libav
