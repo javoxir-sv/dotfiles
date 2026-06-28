@@ -14,9 +14,10 @@ done
 cd "$DOTFILES_DIR/shared/" || exit
 stow --no-folding -t ~ *
 
-
-cd "$DOTFILES_DIR/profiles/$PROFILE" || exit
-stow --override=".*" -t ~ *
+if [ x"$PROFILE" != "x"]; then
+	cd "$DOTFILES_DIR/profiles/$PROFILE" || exit
+	stow --override=".*" -t ~ *
+fi
 
 cd "$HOME" || exit
 exec "$COMPOSITOR"
