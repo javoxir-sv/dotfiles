@@ -7,13 +7,24 @@ cd "$DOTFILES_DIR/profiles/" || exit
 for dir in *; do
 	cd "$dir" || exit
 	stow -D -t ~ * 2>/dev/null
+	# rm -rf "$HOME/.config/$dir"
 	cd "../" || exit
 done
 
-if [[ "$(ls -A $DOTFILES_DIR/shared)" ]]; then
-	cd "$DOTFILES_DIR/shared/" || exit
-	stow --no-folding -t ~ *
+# if [[ "$(ls -A $DOTFILES_DIR/shared)" ]]; then
+# 	cd "$DOTFILES_DIR/shared/" || exit
+# 	stow --no-folding -t ~ *
+# fi
+
+if [ -d "$DOTFILES_DIR/shared" ]; then
+    shopt -s nullglob
+    shared_pkgs=("$DOTFILES_DIR/shared/"*)
+    if [ ${#shared_pkgs[@]} -gt 0 ]; then
+        cd "$DOTFILES_DIR/shared/" || exit
+        stow --no-folding -t ~ "${shared_pkgs[@]}"
+    fi
 fi
+
 
 if [[ x"$PROFILE" != "x" ]]; then
 	cd "$DOTFILES_DIR/profiles/$PROFILE" || exit
