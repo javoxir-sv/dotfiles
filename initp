@@ -10,11 +10,12 @@ for dir in *; do
 	cd "../" || exit
 done
 
+if [[ "$(ls -A $DOTFILES_DIR/shared)" ]]; then
+	cd "$DOTFILES_DIR/shared/" || exit
+	stow --no-folding -t ~ *
+fi
 
-cd "$DOTFILES_DIR/shared/" || exit
-stow --no-folding -t ~ *
-
-if [ x"$PROFILE" != "x"]; then
+if [[ x"$PROFILE" != "x" ]]; then
 	cd "$DOTFILES_DIR/profiles/$PROFILE" || exit
 	stow --override=".*" -t ~ *
 fi
