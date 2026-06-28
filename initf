@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+COMPOSITOR=$1
+PROFILE=$2
+DOTFILES_DIR="$HOME/.dotfiles"
+
+shopt -s nullglob
+
+if [ -d "$DOTFILES_DIR/profiles/"]; then
+	cd "$DOTFILES_DIR/profiles/" || exit
+	for dir in *; do
+		if [ -d "$dir"]; then
+			cd "$dir" || exit
+			profile_pkgs=( * )
+			if [${#profile_pkgs[@]} -gt 0]; then
+				stow -D -t ~ "${profile_pkgs[@]}" 2>/dev/null
+			fi
+			cd "../" || exit
+		fi
+	done
+fi
+
+
+if [ -d "$DOTFILES_DIR/shared/" ]; then
+	cd "$DOTFILES_DIR/shared/" || exit
+	shared_pkgs=( * )
+	if [${#shared_pkgs[@]} -gt 0]; then
+		stow --no-folding -t ~ "${shared_pkgs[@]}"
+	fi
+fi
+
+
+if [ -d "$DOTFILES_DIR/profiles/$PROFILE" ]; then
+	cd "$DOTFILES_DIR/profiles/$PROFILE" || exit
+	profile_pkgs=( * )
+	if [${#profile_pkgs[@]} -gt 0]; then
+		stow --override=".*" -t ~ "${profile_pkgs[@]}"
+	fi
+fi
+
+cd "$HOME" || exit
+exec "$COMPOSITOR"

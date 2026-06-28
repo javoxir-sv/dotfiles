@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+COMPOSITOR=$1
+PROFILE=$2
+DOTFILES_DIR="$HOME/.dotfiles"
+
+cd "$DOTFILES_DIR/profiles/" || exit
+for dir in *; do
+	cd "$dir" || exit
+	stow -D -t ~ * 2>/dev/null
+	cd "../" || exit
+done
+
+
+cd "$DOTFILES_DIR/shared/" || exit
+stow --no-folding -t ~ *
+
+
+cd "$DOTFILES_DIR/profiles/$PROFILE" || exit
+stow --override=".*" -t ~ *
+
+cd "$HOME" || exit
+exec "$COMPOSITOR"
