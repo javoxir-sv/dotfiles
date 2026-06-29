@@ -3,17 +3,14 @@ COMPOSITOR=$1
 PROFILE=$2
 DOTFILES_DIR="$HOME/.dotfiles"
 
-cd "$DOTFILES_DIR/profiles/" || exit
-for dir in *; do
-	cd "$dir" || exit
-	stow -D -t ~ * 2>/dev/null
-	cd ..
-done
-
-# if [[ "$(ls -A $DOTFILES_DIR/shared)" ]]; then
-# 	cd "$DOTFILES_DIR/shared/" || exit
-# 	stow --no-folding -t ~ *
-# fi
+if [ -d "$DOTFILES_DIR/profiles/" ]; then
+	cd "$DOTFILES_DIR/profiles/" || exit
+	for dir in *; do
+		cd "$dir" || exit
+		stow -D -t ~ * 2>/dev/null
+		cd ..
+	done
+fi
 
 if [ -d "$DOTFILES_DIR/shared" ]; then
     shopt -s nullglob
@@ -24,15 +21,14 @@ if [ -d "$DOTFILES_DIR/shared" ]; then
     fi
 fi
 
-
-if [[ x"$PROFILE" != "x" ]]; then
+if [[ -n "$PROFILE" && -d "$DOTFILES_DIR/profiles/$PROFILE" ]]; then
 	cd "$DOTFILES_DIR/profiles/$PROFILE" || exit
 	for pkg in */; do
 		pkg_name="${pkg%/}"
-		cd "$DOTFILES_DIR/shared/" $$ stow -D -t ~ "$pkg_name" 2>/dev/null
+		stow -d "$DOTFILES_DIR/shared/" -D -t ~ "$pkg_name" 2>/dev/null
 		# rm -rf "$HOME/.config/$pkg"
 	done
-	stow --override=".*" -t ~ *
+	stow --no-folding --override=".*" -t ~ *
 fi
 
 cd "$HOME" || exit
