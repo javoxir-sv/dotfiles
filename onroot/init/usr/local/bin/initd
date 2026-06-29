@@ -28,7 +28,9 @@ fi
 if [[ x"$PROFILE" != "x" ]]; then
 	cd "$DOTFILES_DIR/profiles/$PROFILE" || exit
 	for pkg in */; do
-		rm -rf "$HOME/.config/$pkg"
+		pkg_name="${pkg%/}"
+		cd "$DOTFILES_DIR/shared/" $$ stow -D -t ~ "$pkg_name" 2>/dev/null
+		# rm -rf "$HOME/.config/$pkg"
 	done
 	stow --override=".*" -t ~ *
 fi
