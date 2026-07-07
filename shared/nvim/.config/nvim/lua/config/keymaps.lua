@@ -14,3 +14,14 @@ vim.keymap.set('n', '<M-j>', '<cmd>cnext<cr>', { desc = 'Go to next line | Quick
 vim.keymap.set('n', '<M-k>', '<cmd>cprev<cr>', { desc = 'Go to previous line | Quickfix' })
 vim.keymap.set('i', "<M-h>", "<Left>", { desc = "Move the cursor to the left. Motions, but in insert mode" })
 vim.keymap.set('i', "<M-l>", "<Right>", { desc = "Move the cursor to the right. Motions, but in insert mode" })
+
+
+-- leap.nvim
+vim.keymap.set({ 'n', 'x', 'o' }, 's', '<Plug>(leap)')
+vim.keymap.set('n', 'S', '<Plug>(leap-from-window)')
+
+vim.keymap.set({ 'x', 'o' }, 'an', function()
+	require('leap.treesitter').select {
+		opts = require('leap.user').with_traversal_keys('n', 'N')
+	}
+end)

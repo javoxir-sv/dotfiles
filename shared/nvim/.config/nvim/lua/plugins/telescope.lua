@@ -115,7 +115,7 @@ return {
 			{ desc = "Open harpoon window | a.k.a [F]ind [H]arpoon" })
 		-- No prefix
 		vim.keymap.set('n', '<leader>r', builtin.registers, { desc = 'Registers. Pastes the content on <CR>' })
-		vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
+		vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[] Find existing buffers' })
 		vim.keymap.set('n', '<leader>.', builtin.live_grep, { desc = 'Find by grep | Whole directory' })
 		vim.keymap.set('n', '<leader>/', builtin.current_buffer_fuzzy_find,
 			{ desc = "Fuzzy Live search inside of the currently open buffer" })
