@@ -3,9 +3,8 @@ return {
 	opts = {
 		ensure_installed = {
 			"lua_ls",
-			"pylsp",
+			"ty",
 			"clangd",
-			"ruff",
 		},
 		automatic_installation = true,
 	},
