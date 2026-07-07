@@ -47,14 +47,14 @@ return {
 		}
 
 		--Autosave when Telescope opens
-		local save_group = vim.api.nvim_create_augroup('Autosave', { clear = true })
+		--[[ local save_group = vim.api.nvim_create_augroup('Autosave', { clear = true })
 		vim.api.nvim_create_autocmd('User', {
 			group = save_group,
 			pattern = 'TelescopeFindPre',
 			callback = function()
 				--vim.cmd('silent! write')
 			end
-		})
+		}) ]]
 
 
 		-- Harpoon
@@ -93,7 +93,14 @@ return {
 						harpoon:list():remove(selected_entry)
 						current_picker:refresh(make_finder())
 					end)
+					map({ 'n', 'i' }, "dd", function()
+						local state = require("telescope.actions.state")
+						local selected_entry = state.get_selected_entry()
+						local current_picker = state.get_current_picker(prompt_buffer_number)
 
+						harpoon:list():remove(selected_entry)
+						current_picker:refresh(make_finder())
+					end)
 					return true
 				end,
 			}):find()
@@ -113,14 +120,16 @@ return {
 		vim.keymap.set('n', '<leader>fc', builtin.commands, { desc = '[F]ind [C]ommands' })
 		vim.keymap.set("n", "<leader>fh", function() toggle_telescope(harpoon:list()) end,
 			{ desc = "Open harpoon window | a.k.a [F]ind [H]arpoon" })
+
 		-- No prefix
-		vim.keymap.set('n', '<leader>r', builtin.registers, { desc = 'Registers. Pastes the content on <CR>' })
-		vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
+		vim.keymap.set('n', '<leader>rw', builtin.registers, { desc = 'Registers. Pastes the content on <CR>' })
+		vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[] Find existing buffers' })
 		vim.keymap.set('n', '<leader>.', builtin.live_grep, { desc = 'Find by grep | Whole directory' })
 		vim.keymap.set('n', '<leader>/', builtin.current_buffer_fuzzy_find,
 			{ desc = "Fuzzy Live search inside of the currently open buffer" })
 		vim.keymap.set('n', '<leader>t', builtin.treesitter,
 			{ desc = 'Lists Function names, variables, ... using treesitter locals queries' })
+
 		-- LSP
 		vim.keymap.set({ 'n', 'v' }, '<leader>r', builtin.lsp_references,
 			{ desc = 'Lists LSP references for word under the cursor' })
@@ -128,6 +137,7 @@ return {
 			{ desc = "Goto the implementation of the word under the cursor" })
 		vim.keymap.set({ 'n', 'v' }, '<leader>d', builtin.lsp_definitions,
 			{ desc = "Goto the definition of the word under the cursor" })
+
 		-- [G]it prefix
 		vim.keymap.set('n', '<leader>gc', builtin.git_commits,
 			{ desc = "Git commits, checkout action <cr>, reset mixed <C-r>m, reset soft <C-r>s and reset hard <C-r>h" })
