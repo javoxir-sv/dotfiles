@@ -3,7 +3,7 @@ COMPOSITOR=$1
 PROFILE=$2
 DOTFILES_DIR="$HOME/.dotfiles"
 
-if [ -d "$DOTFILES_DIR/profiles/" ]; then
+if [ -d "$DOTFILES_DIR/profiles" ]; then
 	cd "$DOTFILES_DIR/profiles/" || exit
 	for dir in *; do
 		cd "$dir" || exit
@@ -26,7 +26,7 @@ if [[ -n "$PROFILE" && -d "$DOTFILES_DIR/profiles/$PROFILE" ]]; then
 	for pkg in */; do
 		pkg_name="${pkg%/}"
 		stow -d "$DOTFILES_DIR/shared/" -D -t ~ "$pkg_name" 2>/dev/null
-		# rm -rf "$HOME/.config/$pkg"
+		rm -rf "$HOME/.config/$pkg"
 	done
 	stow --no-folding --override=".*" -t ~ *
 fi
