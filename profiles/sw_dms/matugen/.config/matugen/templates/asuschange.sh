@@ -1,2 +1,11 @@
 #!/usr/bin/env bash
-asusctl aura effect static -c {{dank16.color0.default.hex_stripped}}
+
+# more brighter tones
+# asusctl aura effect static -c {{colors.primary.default.hex_stripped}}
+
+# somewhere in-between
+# asusctl aura effect static -c "{{ dank16.color4.default.hex_stripped }}"
+
+# makes warmer, darker tone / kinda nice
+asusctl aura effect static -c {{colors.primary_container.default.hex_stripped}}
+
