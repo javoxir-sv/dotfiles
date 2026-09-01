@@ -1,0 +1,9 @@
+[config]
+
+
+[templates.asusctl]
+input_path = '~/.config/matugen/templates/asuschange.sh'
+output_path = '~/.config/scripts/asuschange.sh'
+post_hook = '~/.config/scripts/asuschange.sh'
+
+
