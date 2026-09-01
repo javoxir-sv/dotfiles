@@ -7,5 +7,7 @@
 # asusctl aura effect static -c "{{ dank16.color4.default.hex_stripped }}"
 
 # makes warmer, darker tone / kinda nice
-asusctl aura effect static -c {{colors.primary_container.default.hex_stripped}}
+# asusctl aura effect static -c {{colors.primary_container.default.hex_stripped}}
 
+# the best overall
+asusctl aura effect static -c {{palettes.primary._60.hex_stripped}}
