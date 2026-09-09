@@ -40,9 +40,16 @@ return {
 
 		-- Treeselect
 		vim.keymap.set({ 'x', 'o' }, 'an', function()
-			require('leap.treesitter').select {
+			local ts = require('leap.treesitter')
+			local targets = type(ts.get_targets) == 'function' and ts.get_targets() or nil
+			ts.select({
+				targets = targets,
 				opts = require('leap.user').with_traversal_keys('n', 'N')
-			}
+			})
+
+			--[[ require('leap.treesitter').select {
+				opts = require('leap.user').with_traversal_keys('n', 'N')
+			} ]]
 		end)
 	end,
 }

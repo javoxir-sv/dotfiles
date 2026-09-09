@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
 # more brighter tones
-# asusctl aura effect static -c 83d2e5
+# asusctl aura effect static -c c9beff
 
 # somewhere in-between
-# asusctl aura effect static -c "69c3d9"
+# asusctl aura effect static -c "b4a8f2"
 
 # makes warmer, darker tone / kinda nice
-# asusctl aura effect static -c 005866
+# asusctl aura effect static -c 514881
 
 # the best overall
-asusctl aura effect static -c 009fb6
+asusctl aura effect static -c 9385dd
