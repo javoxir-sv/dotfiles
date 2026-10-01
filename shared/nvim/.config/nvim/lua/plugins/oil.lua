@@ -19,6 +19,7 @@ return {
 			},
 		},
 		vim.keymap.set('n', '<leader>o', '<cmd>Oil<cr>', { desc = 'Opens the Oil window for the project directory' }),
+		-- vim.keymap.set('n', '<Esc>', '<cmd>Oil<cr>', { desc = 'Opens the Oil window for the project directory' }),
 	},
 	dependencies = {
 		{ "nvim-mini/mini.icons",    opts = {} },

@@ -7,3 +7,7 @@ output_path = '~/.config/scripts/asuschange.sh'
 post_hook = '~/.config/scripts/asuschange.sh'
 
 
+[templates.sway]
+input_path = '~/.config/matugen/templates/border.conf'
+output_path = '~/.config/sway/border/border.conf'
+post_hook = 'swaymsg reload || true'

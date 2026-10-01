@@ -15,3 +15,4 @@ vim.keymap.set({ "n", "x" }, "x", '"_x', { desc = "Don't let the char-delete tou
 vim.keymap.set({ "n", "x" }, "X", '"_d', { desc = "Don't let the char-delete touch the YANK!" })
 vim.keymap.set({ "n", "x" }, "c", '"_c', { desc = "Don't let the char-delete touch the YANK!" })
 vim.keymap.set({ "n", "x" }, "D", '"_D', { desc = "Don't let the char-delete touch the YANK!" })
+vim.keymap.set({ "n", "x" }, "d", '"_d', { desc = "Don't let the char-delete touch the YANK!" })
