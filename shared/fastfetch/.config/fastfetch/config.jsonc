@@ -143,10 +143,6 @@
       "keyIcon": ""
     },
     {
-      "type": "host",
-      "keyIcon": "󰌢"
-    },
-    {
       "type": "kernel",
       "keyIcon": ""
     },
@@ -166,49 +162,21 @@
       "type": "shell",
       "keyIcon": ""
     },
-    // {
-    //   "type": "display",
-    //   "keyIcon": "󰍹",
-    //   "compactType": "none",
-    //   "preciseRefreshRate": false,
-    //   "order": null
-    // },
     {
       "type": "de",
       "keyIcon": ""
     },
     {
-      "type": "wm",
-      "keyIcon": "",
-      "detectPlugin": true
-    },
-    {
       "type": "wmtheme",
       "keyIcon": "󰓸"
     },
-    // {
-    //   "type": "theme",
-    //   "keyIcon": "󰉼"
-    // },
-    // {
-    //   "type": "icons",
-    //   "keyIcon": ""
-    // },
     {
       "type": "font",
       "keyIcon": ""
     },
-    // {
-    //   "type": "cursor",
-    //   "keyIcon": "󰆿"
-    // },
     {
       "type": "terminal",
       "keyIcon": ""
-    },
-    {
-      "type": "terminalfont",
-      "keyIcon": ""
     },
     {
       "type": "cpu",
@@ -268,40 +236,6 @@
         "type": 0
       }
     },
-    {
-      "type": "localip",
-      "keyIcon": "󰩟",
-      "showIpv4": true,
-      "showIpv6": false,
-      "showMac": false,
-      "showLoop": false,
-      "showPrefixLen": true,
-      "showMtu": false,
-      "showSpeed": false,
-      "showFlags": false,
-      "compact": false,
-      "defaultRouteOnly": true,
-      "showAllIps": false,
-      "namePrefix": ""
-    },
-    // {
-    //   "type": "battery",
-    //   "keyIcon": "",
-    //   "temp": false,
-    //   "percent": {
-    //     "green": 50,
-    //     "yellow": 20,
-    //     "type": 0
-    //   }
-    // },
-    {
-      "type": "poweradapter",
-      "keyIcon": "󰚥"
-    },
-    // {
-    //   "type": "locale",
-    //   "keyIcon": ""
-    // },
     "break",
     {
       "type": "colors",
