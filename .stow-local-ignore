@@ -1,6 +1,7 @@
 ^/dep
 ^/sddm
 ^/init
+^/stack
 
 \.git$
 \.gitignore$
