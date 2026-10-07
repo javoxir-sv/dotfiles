@@ -1,7 +1,4 @@
 ttf-iosevka
 ttf-victor-mono
 xdg-desktop-portal-luminous
-ttf-jetbrains-mono-nerd
-font-awesome
-papirus-icon-theme
 layer-shell-qt5
