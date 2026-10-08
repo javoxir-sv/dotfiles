@@ -1,0 +1,63 @@
+icons_format = "{icon}"
+
+[theme]
+theme = "plain"
+
+[theme.overrides]
+idle_bg      = "#080a09"
+idle_fg      = "#8fa189"
+info_bg      = "#18201d"
+info_fg      = "#a9b6a3"
+good_bg      = "#080a09"
+good_fg      = "#70806d"
+warning_bg   = "#2e2318"
+warning_fg   = "#d8a657"
+critical_bg  = "#421e1e"
+critical_fg  = "#e0cfcf"
+separator    = "|"
+separator_bg = "#080a09"
+separator_fg = "#232d29"
+
+
+[icons]
+icons = "none"
+
+[[block]]
+block = "net"
+device = "^w|e"
+format = " $speed_down.eng(w:3,u:B)↓ $speed_up.eng(w:3,u:B)↑ "
+interval = 2
+
+[[block]]
+block = "cpu"
+interval = 2
+format = " cpu $utilization "
+
+[[block]]
+block = "load"
+interval = 5
+format = " load $1m "
+
+[[block]]
+block = "memory"
+format = " mem $mem_used.eng(w:3,u:B)/$mem_total.eng(w:3,u:B) ($mem_used_percents%) "
+interval = 2
+
+[[block]]
+block = "disk_space"
+path = "/"
+info_type = "available"
+interval = 30
+format = " root $available "
+
+[[block]]
+block = "sound"
+format = " vol $volume% "
+[[block.click]]
+button = "left"
+cmd = "pavucontrol"
+
+[[block]]
+block = "time"
+interval = 5
+format = " $timestamp.datetime(f:'%a %b %d  %H:%M') "
