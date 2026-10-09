@@ -34,11 +34,6 @@ interval = 2
 format = " cpu $utilization "
 
 [[block]]
-block = "load"
-interval = 5
-format = " load $1m "
-
-[[block]]
 block = "memory"
 format = " mem $mem_used.eng(w:3,u:B)/$mem_total.eng(w:3,u:B) ($mem_used_percents%) "
 interval = 2
