@@ -5,18 +5,18 @@ theme = "plain"
 
 [theme.overrides]
 idle_bg      = "#080a09"
-idle_fg      = "#8fa189"
-info_bg      = "#18201d"
-info_fg      = "#a9b6a3"
+idle_fg      = "#ffffff"
+info_bg      = "#285577"
+info_fg      = "#ffffff"
 good_bg      = "#080a09"
-good_fg      = "#70806d"
-warning_bg   = "#2e2318"
-warning_fg   = "#d8a657"
-critical_bg  = "#421e1e"
-critical_fg  = "#e0cfcf"
+good_fg      = "#00ff00"
+warning_bg   = "#222222"
+warning_fg   = "#ffa500"
+critical_bg  = "#900000"
+critical_fg  = "#ffffff"
 separator    = "|"
 separator_bg = "#080a09"
-separator_fg = "#232d29"
+separator_fg = "#666666"
 
 
 [icons]
@@ -52,7 +52,7 @@ format = " root $available "
 
 [[block]]
 block = "sound"
-format = " vol $volume% "
+format = " vol $volume "
 [[block.click]]
 button = "left"
 cmd = "pavucontrol"

@@ -12,8 +12,6 @@ set $right l
 font pango:monospace 11
 #font pango:JetBrainsMono Nerd Font 11
 #font pango:Victor Mono 11
-#font pango:Rajdhani SemiBold 11
-#font pango:DejaVu Sans Mono 8
 
 
 #System autostarts
