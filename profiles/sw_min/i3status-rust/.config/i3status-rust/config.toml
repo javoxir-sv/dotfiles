@@ -35,7 +35,7 @@ format = " cpu $utilization "
 
 [[block]]
 block = "memory"
-format = " mem $mem_used.eng(w:3,u:B)/$mem_total.eng(w:3,u:B) ($mem_used_percents%) "
+format = " mem $mem_used.eng(w:3,u:B)/$mem_total.eng(w:3,u:B) ($mem_used_percents) "
 interval = 2
 
 [[block]]
