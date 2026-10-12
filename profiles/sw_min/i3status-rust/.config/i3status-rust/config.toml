@@ -23,6 +23,12 @@ separator_fg = "#666666"
 icons = "none"
 
 [[block]]
+block = "tea_timer"
+increment = 60
+format = " $icon {$minutes:$seconds |}"
+done_cmd = "notify-send 'Timer Finished'"
+
+[[block]]
 block = "net"
 device = "^w|e"
 format = " $speed_down.eng(w:3,u:B)↓ $speed_up.eng(w:3,u:B)↑ "
