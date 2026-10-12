@@ -26,7 +26,7 @@ icons = "none"
 block = "tea_timer"
 increment = 60
 format = " $icon {$minutes:$seconds |}"
-done_cmd = "notify-send 'Timer Finished'"
+done_cmd = "swaynag -t warning -m 'Timer Finished!'"
 
 [[block]]
 block = "net"
