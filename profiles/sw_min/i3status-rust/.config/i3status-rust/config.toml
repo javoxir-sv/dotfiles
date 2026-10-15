@@ -25,7 +25,7 @@ icons = "none"
 [[block]]
 block = "taskwarrior"
 interval = 60
-format = " $icon count.eng(w:1) tasks "
+format = " $icon $count.eng(w:1) tasks "
 format_singular = " $icon 1 task "
 format_everything_done = ""
 warning_threshold = 10
@@ -33,10 +33,6 @@ critical_threshold = 20
 [[block.filters]]
 name = "today"
 filter = "+PENDING +OVERDUE or +DUETODAY"
-[[block.filters]]
-name = "some-project"
-filter = "project:some-project +PENDING"
-config_override = ["rc.context:none"]
 
 [[block]]
 block = "tea_timer"
