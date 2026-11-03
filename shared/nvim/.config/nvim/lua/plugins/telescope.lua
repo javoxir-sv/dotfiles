@@ -122,7 +122,7 @@ return {
 			{ desc = "Open harpoon window | a.k.a [F]ind [H]arpoon" })
 
 		-- No prefix
-		vim.keymap.set('n', '<leader>rw', builtin.registers, { desc = 'Registers. Pastes the content on <CR>' })
+		vim.keymap.set('n', '<leader>pr', builtin.registers, { desc = 'Registers. Pastes the content on <CR>' })
 		vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[] Find existing buffers' })
 		vim.keymap.set('n', '<leader>.', builtin.live_grep, { desc = 'Find by grep | Whole directory' })
 		vim.keymap.set('n', '<leader>/', builtin.current_buffer_fuzzy_find,
@@ -131,8 +131,8 @@ return {
 			{ desc = 'Lists Function names, variables, ... using treesitter locals queries' })
 
 		-- LSP
-		vim.keymap.set({ 'n', 'v' }, '<leader>r', builtin.lsp_references,
-			{ desc = 'Lists LSP references for word under the cursor' })
+		-- vim.keymap.set({ 'n', 'v' }, '<leader>r', builtin.lsp_references,
+		-- 	{ desc = 'Lists LSP references for word under the cursor' })
 		vim.keymap.set({ 'n', 'v' }, '<leader>i', builtin.lsp_implementations,
 			{ desc = "Goto the implementation of the word under the cursor" })
 		vim.keymap.set({ 'n', 'v' }, '<leader>d', builtin.lsp_definitions,

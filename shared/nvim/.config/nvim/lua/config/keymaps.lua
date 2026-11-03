@@ -6,6 +6,7 @@ vim.keymap.set('n', '<M-j>', '<cmd>cnext<cr>', { desc = 'Go to next line | Quick
 vim.keymap.set('n', '<M-k>', '<cmd>cprev<cr>', { desc = 'Go to previous line | Quickfix' })
 -- vim.keymap.set('i', "<C-h>", "<Left>", { desc = "Move the cursor to the left. Motions, but in insert mode" })
 vim.keymap.set('i', "<C-l>", "<Right>", { desc = "Move the cursor to the right. Motions, but in insert mode" })
+vim.keymap.set('i', "<C-;>", "<Right>", { desc = "Move the cursor to the right. Motions, but in insert mode" })
 vim.keymap.set("i", "<C-j>", "<Down>", { desc = "Move down in insert mode" })
 vim.keymap.set("i", "<C-k>", "<Up>", { desc = "Move up in insert mode" })
 vim.keymap.set('n', '<leader>lr', '<cmd>lsp restart<cr>', { desc = 'Restart LSP' })
@@ -16,3 +17,7 @@ vim.keymap.set({ "n", "x" }, "X", '"_d', { desc = "Don't let the char-delete tou
 vim.keymap.set({ "n", "x" }, "c", '"_c', { desc = "Don't let the char-delete touch the YANK!" })
 vim.keymap.set({ "n", "x" }, "D", '"_D', { desc = "Don't let the char-delete touch the YANK!" })
 vim.keymap.set({ "n", "x" }, "d", '"_d', { desc = "Don't let the char-delete touch the YANK!" })
+
+-- python related
+vim.keymap.set("n", "<leader>r", ":w | term python %<CR>", { desc = "Runs the current python file" })
+-- vim.keymap.set("v", "<leader>r", ":'swapfile<CR>:w !python3<CR>", { desc = "Run selected Python code" })

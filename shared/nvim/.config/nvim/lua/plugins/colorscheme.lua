@@ -1,4 +1,4 @@
-return {
+--[[ return {
 	"sanzharkuandyk/nagisa.nvim",
 	lazy = false,
 	priority = 1000,
@@ -8,4 +8,6 @@ return {
 		})
 		vim.cmd.colorscheme("EndOfTheWorld")
 	end,
-}
+} ]]
+
+return {}

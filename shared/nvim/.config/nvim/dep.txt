@@ -1,4 +1,0 @@
-Realized this is not going to be a dependancy list.
-ripgrep
-fd
-rustup
