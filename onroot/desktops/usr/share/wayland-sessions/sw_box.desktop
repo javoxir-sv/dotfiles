@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Sway (Box)
+Comment=An i3-compatible Wayland compositor
+Exec=/usr/local/bin/initd sway sw_box
+Type=Application
+DesktopNames=sway;wlroots

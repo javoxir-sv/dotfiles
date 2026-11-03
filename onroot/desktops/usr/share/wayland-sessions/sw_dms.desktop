@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Sway (DMS)
+Comment=An i3-compatible Wayland compositor
+Exec=/usr/local/bin/initd sway sw_dms
+Type=Application
+DesktopNames=sway;wlroots
