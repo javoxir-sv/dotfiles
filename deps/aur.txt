@@ -1,4 +1,2 @@
 ttf-iosevka
 ttf-victor-mono
-xdg-desktop-portal-luminous
-layer-shell-qt5

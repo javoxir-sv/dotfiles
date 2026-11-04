@@ -1,3 +1,4 @@
+# old deps
 maim
 xdg-desktop-portal 
 xdg-desktop-portal-gtk 
@@ -46,3 +47,35 @@ gst-plugins-ugly
 nwg-look 
 
 
+
+## actually updated
+i3status-rust
+grim
+slurp
+fish
+foot
+swayidle
+swaylock
+kitty
+dux-shell
+wl-clipboard
+tree-sitter
+imagemagick
+tree-sitter-cli
+neovim
+sway
+stow
+xdg-desktop-portal 
+xdg-desktop-portal-gtk 
+xdg-desktop-portal-wlr
+pavucontrol
+swaybg
+maim
+matugen
+task
+timew
+tmux
+# tpm - tmux plugin manager
+zsh
+# oh-my-zsh
+gnome-keyrings
