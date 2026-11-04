@@ -64,6 +64,11 @@ interval = 30
 format = " root $available "
 
 [[block]]
+block = "battery"
+driver = "sysfs"
+format = " $percentage {$time_remaining.dur(hms:true, min_unit:m) |}"
+
+[[block]]
 block = "sound"
 format = " vol $volume "
 [[block.click]]
