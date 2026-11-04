@@ -81,5 +81,10 @@ zsh
 gnome-keyrings
 brightnessctl
 
+# dms
 eza
 direnv
+
+# holo
+i3blocks
+rofi
