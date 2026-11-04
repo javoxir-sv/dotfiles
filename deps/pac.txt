@@ -79,3 +79,5 @@ tmux
 zsh
 # oh-my-zsh
 gnome-keyrings
+brightnessctl
+
