@@ -18,6 +18,13 @@ set $term kitty
 # Your preferred application launcher
 set $menu wmenu-run
 
+
+# lock on idle
+exec swayidle -w \
+    timeout 300 'swaylock -f -c 000000' \
+    timeout 360 'systemctl suspend' \
+    before-sleep 'swaylock -f -c 000000'
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)

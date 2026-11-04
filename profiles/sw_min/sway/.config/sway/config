@@ -1,6 +1,5 @@
 set $mod Mod4
 
-
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -60,4 +59,3 @@ bindswitch --reload --locked lid:off output $laptop enable
 
 
 output * adaptive_sync off
-
