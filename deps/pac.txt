@@ -88,3 +88,5 @@ direnv
 # holo
 i3blocks
 rofi
+
+unzip
