@@ -135,7 +135,7 @@ return {
 		-- 	{ desc = 'Lists LSP references for word under the cursor' })
 		vim.keymap.set({ 'n', 'v' }, '<leader>i', builtin.lsp_implementations,
 			{ desc = "Goto the implementation of the word under the cursor" })
-		vim.keymap.set({ 'n', 'v' }, '<leader>d', builtin.lsp_definitions,
+		vim.keymap.set({ 'n', 'v' }, '<leader>d', builtin.lsp_type_definitions, -- lsp_definitions
 			{ desc = "Goto the definition of the word under the cursor" })
 
 		-- [G]it prefix
