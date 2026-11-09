@@ -1,3 +1,4 @@
+-- return {}
 return {
 	'saghen/blink.cmp',
 	event = "VimEnter",
@@ -48,7 +49,7 @@ return {
 		},
 
 		completion = {
-			menu = { auto_show = true },
+			menu = { auto_show = false },
 			documentation = {
 				auto_show = false,
 				auto_show_delay_ms = 50,
