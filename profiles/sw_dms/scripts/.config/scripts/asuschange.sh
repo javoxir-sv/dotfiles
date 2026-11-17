@@ -10,4 +10,4 @@
 # asusctl aura effect static -c 4f378b
 
 # the best overall
-# asusctl aura effect static -c 9c82db
+asusctl aura effect static -c 9c82db
