@@ -4,7 +4,7 @@ icons_format = "{icon}"
 theme = "plain"
 
 [theme.overrides]
-idle_bg      = "#080a09"
+idle_bg      = "#323232"
 idle_fg      = "#ffffff"
 info_bg      = "#285577"
 info_fg      = "#ffffff"
@@ -15,7 +15,7 @@ warning_fg   = "#ffa500"
 critical_bg  = "#900000"
 critical_fg  = "#ffffff"
 separator    = "|"
-separator_bg = "#080a09"
+separator_bg = "#323232"
 separator_fg = "#666666"
 
 
