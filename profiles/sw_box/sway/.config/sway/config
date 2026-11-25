@@ -24,18 +24,24 @@ input "type:keyboard" {
 
 include /etc/sway/config.d/*
 
-#System autostarts
+# System autostarts
 include start.conf
 
 # Keybinds / Keymaps
 include keybinds.conf
 
-#Bar
+# Bar
 include bar.conf
 
-#Gaps
+# Gaps
 include gaps.conf
 
+
+# Border
+# default_border normal 0
+
+# none|vertical|horizontal|both|smart|smart_no_gaps
+hide_edge_borders smart_no_gaps
 
 # libinput configuation
 input "type:touchpad" {
