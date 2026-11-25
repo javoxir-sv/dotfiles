@@ -5,6 +5,7 @@ return {
 			"lua_ls",
 			"ty",
 			"clangd",
+			"gopls",
 		},
 		automatic_installation = true,
 	},

@@ -21,3 +21,6 @@ vim.keymap.set({ "n", "x" }, "d", '"_d', { desc = "Don't let the char-delete tou
 -- python related
 vim.keymap.set("n", "<leader>r", ":w | term python %<CR>", { desc = "Runs the current python file" })
 -- vim.keymap.set("v", "<leader>r", ":'swapfile<CR>:w !python3<CR>", { desc = "Run selected Python code" })
+
+-- go
+vim.keymap.set("n", "<leader>g", ":w | term go run %<CR>", { desc = "Runs the current python file" })
